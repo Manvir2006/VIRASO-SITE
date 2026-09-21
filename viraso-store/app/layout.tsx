@@ -14,8 +14,16 @@ export const metadata: Metadata = {
     "Umbrella sewing machine stand",
   ],
   icons: {
-    icon: "/logo/Untitled design (1).jpg",
-    apple: "/logo/Untitled design (1).jpg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png" },
+      { url: "/logo/viraso-favicon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-icon.png" },
+      { url: "/apple-touch-icon.png" },
+    ],
   },
 };
 

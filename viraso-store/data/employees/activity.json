@@ -1,0 +1,29 @@
+[
+  {
+    "id": "act_1789978345794_5tol",
+    "employee_id": "EMP0004",
+    "employee_name": "Ananya Sen",
+    "login_time": "2026-09-21T08:12:25.793Z",
+    "ip_address": "::1",
+    "device": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.9444",
+    "last_active": "2026-09-21T08:12:25.793Z"
+  },
+  {
+    "id": "act_1789978344814_us21",
+    "employee_id": "EMP0004",
+    "employee_name": "Ananya Sen",
+    "login_time": "2026-09-21T08:12:24.814Z",
+    "ip_address": "::1",
+    "device": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.9444",
+    "last_active": "2026-09-21T08:12:24.814Z"
+  },
+  {
+    "id": "act_1789978344768_uean",
+    "employee_id": "EMP0002",
+    "employee_name": "Kavita Sharma",
+    "login_time": "2026-09-21T08:12:24.768Z",
+    "ip_address": "::1",
+    "device": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.9444",
+    "last_active": "2026-09-21T08:12:24.768Z"
+  }
+]

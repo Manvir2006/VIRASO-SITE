@@ -1,0 +1,2 @@
+import { AdminSectionPage } from "@/components/admin-section-page";
+export default function AdminReportsPage() { return <AdminSectionPage title="Reports" description="Reports workspace for sales, orders, products, warranty, registrations, complaints, and visitors." links={[{ href: "/admin/product-registrations", label: "Registration Report" }, { href: "/admin/orders", label: "Order Report" }]}/>; }

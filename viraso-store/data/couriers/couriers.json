@@ -1,0 +1,68 @@
+[
+  {
+    "id": "cour-ekart",
+    "name": "Ekart",
+    "tracking_url": "https://www.ekartlogistics.com/ekartlogistics-web/shipmenttrack/{TRACKING_ID}",
+    "url_type": "courier_awb",
+    "identifier_type": "courier_awb",
+    "is_active": true,
+    "display_order": 1,
+    "created_at": "2026-09-21T07:42:13.232Z",
+    "updated_at": "2026-09-21T07:42:13.232Z"
+  },
+  {
+    "id": "cour-delhivery",
+    "name": "Delhivery",
+    "tracking_url": "https://www.delhivery.com/track-v2/package/{TRACKING_ID}",
+    "url_type": "courier_awb",
+    "identifier_type": "courier_awb",
+    "is_active": true,
+    "display_order": 2,
+    "created_at": "2026-09-21T07:42:13.232Z",
+    "updated_at": "2026-09-21T07:42:13.232Z"
+  },
+  {
+    "id": "cour-shadowfax",
+    "name": "Shadowfax",
+    "tracking_url": "https://www.shadowfax.in/track",
+    "url_type": "page_only",
+    "identifier_type": "page_only",
+    "is_active": true,
+    "display_order": 3,
+    "created_at": "2026-09-21T07:42:13.232Z",
+    "updated_at": "2026-09-21T07:42:13.232Z"
+  },
+  {
+    "id": "cour-bluedart",
+    "name": "Blue Dart",
+    "tracking_url": "https://www.bluedart.com/tracking/{TRACKING_ID}",
+    "url_type": "courier_awb",
+    "identifier_type": "courier_awb",
+    "is_active": true,
+    "display_order": 4,
+    "created_at": "2026-09-21T07:42:13.232Z",
+    "updated_at": "2026-09-21T07:42:13.232Z"
+  },
+  {
+    "id": "cour-dtdc",
+    "name": "DTDC",
+    "tracking_url": "https://www.dtdc.in/tracking/shipment-tracking.asp?strCnno={TRACKING_ID}",
+    "url_type": "courier_awb",
+    "identifier_type": "courier_awb",
+    "is_active": true,
+    "display_order": 5,
+    "created_at": "2026-09-21T07:42:13.232Z",
+    "updated_at": "2026-09-21T07:42:13.232Z"
+  },
+  {
+    "id": "cour-indiapost",
+    "name": "India Post",
+    "tracking_url": "https://www.indiapost.gov.in/_layouts/15/dop.portal.tracking/trackconsignment.aspx",
+    "url_type": "page_only",
+    "identifier_type": "page_only",
+    "is_active": true,
+    "display_order": 6,
+    "created_at": "2026-09-21T07:42:13.232Z",
+    "updated_at": "2026-09-21T07:42:13.232Z"
+  }
+]

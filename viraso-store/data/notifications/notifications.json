@@ -1,0 +1,20 @@
+[
+  {
+    "id": "notif_1789977794465_ujt2",
+    "recipient_key": "9825123456",
+    "title": "B2B Inquiry Submitted",
+    "message": "Your B2B inquiry has been received successfully. Inquiry ID: B2B-2026-00004. Our business team will contact you shortly.",
+    "inquiry_id": "B2B-2026-00004",
+    "is_read": false,
+    "created_at": "2026-09-21T08:03:14.465Z"
+  },
+  {
+    "id": "notif_1789977680281_3zb8",
+    "recipient_key": "9777103074",
+    "title": "B2B Inquiry Submitted",
+    "message": "Your B2B inquiry has been received successfully. Inquiry ID: B2B-2026-00003. Our business team will contact you shortly.",
+    "inquiry_id": "B2B-2026-00003",
+    "is_read": false,
+    "created_at": "2026-09-21T08:01:20.281Z"
+  }
+]

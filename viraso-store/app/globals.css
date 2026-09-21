@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Geometr415 Blk BT';
+  src: local('Geometr415 Blk BT'),
+       local('Geometr415 Blk BT Black'),
+       local('Geometr415-Blk-BT'),
+       url('/fonts/Geometr415-Blk-BT.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-viraso {
+  font-family: 'Geometr415 Blk BT', 'Geometr 415', 'Eurostile', sans-serif;
+}
+
+:root {
+  --brand-navy: #0d2946;
+  --brand-navy-dark: #071d31;
+  --brand-black: #111111;
+  --brand-white: #ffffff;
+  --brand-bg: #f5f7fb;
+  --brand-border: #e5e7eb;
+  --brand-muted: #6b7280;
+  --brand-success: #1f8f5f;
+  --brand-danger: #b91c1c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--brand-bg);
+  color: var(--brand-black);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: rgba(13, 41, 70, 0.18);
+  color: var(--brand-black);
+}

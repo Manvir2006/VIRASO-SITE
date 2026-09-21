@@ -1,0 +1,56 @@
+[
+  {
+    "id": "ORD-1001",
+    "orderNumber": "VIR12345",
+    "customerName": "Aarav Sharma",
+    "email": "aarav@example.com",
+    "mobile": "9876543210",
+    "product": "Viraso Domestic Sewing Machine Stand & Table with Belt",
+    "quantity": 1,
+    "orderDate": "2026-09-01",
+    "paymentStatus": "Paid",
+    "shippingStatus": "In transit",
+    "status": "Shipped",
+    "timeline": [
+      "Order Placed",
+      "Payment Confirmed",
+      "Processing",
+      "Packed",
+      "Shipped",
+      "Delivered"
+    ],
+    "courier": "Delhivery",
+    "trackingNumber": "5573300516004",
+    "cashfreeOrderId": "",
+    "cashfreePaymentId": "",
+    "shippingAddress": "",
+    "internalNotes": "",
+    "updatedAt": "2026-09-21T07:49:15.988Z",
+    "courierReference": "",
+    "shippingDate": ""
+  },
+  {
+    "id": "ORD-1002",
+    "orderNumber": "VIR12346",
+    "customerName": "Neha Verma",
+    "email": "neha@example.com",
+    "mobile": "9876543211",
+    "product": "Viraso Umbrella/TA-1 Sewing Machine Stand & Table with Belt",
+    "quantity": 2,
+    "orderDate": "2026-09-08",
+    "paymentStatus": "Paid",
+    "shippingStatus": "In transit",
+    "status": "Shipped",
+    "timeline": [
+      "Order Placed",
+      "Payment Confirmed",
+      "Processing",
+      "Packed",
+      "Shipped",
+      "Delivered"
+    ],
+    "updatedAt": "2026-09-21T07:42:59.247Z",
+    "courier": "Ekart",
+    "trackingNumber": "EKT1283921"
+  }
+]

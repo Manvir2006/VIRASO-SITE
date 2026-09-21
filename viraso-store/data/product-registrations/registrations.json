@@ -1,0 +1,28 @@
+[
+  {
+    "serialNumber": "4E314",
+    "customerName": "gsfg",
+    "mobile": "6283597264",
+    "email": "manvirsingh5020@gmail.com",
+    "pinCode": "141003",
+    "city": "LUDHIANA",
+    "state": "US State",
+    "locality": "LUDHIANA",
+    "purchaseDate": "2026-09-05",
+    "categoryId": "sewing-machine-stands",
+    "productId": "SM01",
+    "dealerName": "awr",
+    "dealerCity": "fda",
+    "id": "db-332550c1-06d6-40ef-870e-b6ceda0fe5c6",
+    "registrationId": "VR-2026-000001",
+    "categoryName": "Sewing Machine Stands",
+    "subcategoryId": "sewing-machine-stands-domestic",
+    "subcategoryName": "Domestic",
+    "productName": "Viraso Domestic Sewing Machine Stand & Table with Belt",
+    "registrationDate": "2026-09-20T10:14:35.251Z",
+    "status": "Rejected",
+    "adminNotes": [],
+    "createdAt": "2026-09-20T10:14:35.251Z",
+    "updatedAt": "2026-09-21T07:27:21.898Z"
+  }
+]

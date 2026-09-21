@@ -41,7 +41,7 @@ export function generateRandomPassword(length = 10): string {
 
 
 // Seed Employees
-const seedAdminPass = hashPassword("Viraso2026@");
+const seedAdminPass = hashPassword(process.env.ADMIN_ACCESS_KEY || "Viraso2026@");
 const seedSalesPass = hashPassword("VirasoSales@2026");
 const seedSupportPass = hashPassword("VirasoSupport@2026");
 

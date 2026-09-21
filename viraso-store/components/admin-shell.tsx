@@ -87,8 +87,11 @@ export function AdminShell({ children }: { children: ReactNode }) {
     }
   }, [pathname, router]);
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
     window.sessionStorage.removeItem("viraso-admin-key");
+    try {
+      await fetch("/api/admin/logout", { method: "POST" });
+    } catch {}
     router.push("/admin/login");
   };
 

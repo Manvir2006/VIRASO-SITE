@@ -1,12 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const configuredKey = process.env.ADMIN_ACCESS_KEY;
-
-export function adminAccessKeyConfigured() {
-  return Boolean(configuredKey);
+export function getAdminAccessKey(): string | undefined {
+  return process.env.ADMIN_ACCESS_KEY;
 }
 
-export function isAdminRequest(request: NextRequest) {
+export function adminAccessKeyConfigured(): boolean {
+  return Boolean(process.env.ADMIN_ACCESS_KEY);
+}
+
+export function isAdminRequest(request: NextRequest): boolean {
+  const configuredKey = process.env.ADMIN_ACCESS_KEY;
   return Boolean(configuredKey && request.headers.get("x-admin-key") === configuredKey);
 }
 

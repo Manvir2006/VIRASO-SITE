@@ -14,10 +14,11 @@ export default function AdminLoginPage() {
     event.preventDefault();
     setLoading(true);
     setError("");
+    const trimmedKey = key.trim();
     const response = await fetch("/api/admin/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ key }),
+      body: JSON.stringify({ key: trimmedKey }),
     });
     const data = await response.json();
     setLoading(false);
@@ -25,7 +26,7 @@ export default function AdminLoginPage() {
       setError(data.error || "Invalid admin access key.");
       return;
     }
-    window.sessionStorage.setItem("viraso-admin-key", key);
+    window.sessionStorage.setItem("viraso-admin-key", trimmedKey);
     router.push("/admin/dashboard");
   };
 

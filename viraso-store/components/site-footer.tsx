@@ -10,6 +10,7 @@ const quickLinks = [
   { href: "/product-registration", label: "Product Registration" },
   { href: "/warranty", label: "Warranty" },
   { href: "/support/product-complaint", label: "Product Complaint" },
+  { href: "/support/track-complaint", label: "Track Complaint" },
   { href: "/contact", label: "Contact Us" },
   { href: "/b2b-inquiry", label: "B2B / Wholesale" },
   { href: "/about", label: "About Viraso" },

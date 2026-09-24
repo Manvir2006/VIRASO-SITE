@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const supportLinks = [
   { href: "/support/product-complaint", label: "Product Complaint" },
+  { href: "/support/track-complaint", label: "Track Your Complaint" },
   { href: "/support/track-order", label: "Track Your Order" },
   { href: "/support/contact", label: "Contact" },
 ];

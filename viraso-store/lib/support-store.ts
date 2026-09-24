@@ -231,6 +231,37 @@ export async function listComplaints(includeArchived = false) {
   return includeArchived ? records : records.filter((item) => !item.isArchived);
 }
 
+export async function getComplaintById(complaintId: string) {
+  const records = await listComplaints(true);
+  const normalizedId = complaintId.trim().toUpperCase().replace(/\s+/g, "");
+  return (
+    records.find((item) => {
+      const currentId = item.id.trim().toUpperCase().replace(/\s+/g, "");
+      return currentId === normalizedId || currentId.endsWith(normalizedId);
+    }) ?? null
+  );
+}
+
+export async function findComplaint(complaintId: string, mobileOrLookup?: string) {
+  const complaint = await getComplaintById(complaintId);
+  if (!complaint) return null;
+
+  if (mobileOrLookup && mobileOrLookup.trim()) {
+    const cleanMobileDigits = mobileOrLookup.replace(/[^0-9]/g, "").slice(-10);
+    const itemMobileDigits = complaint.mobileNumber.replace(/[^0-9]/g, "").slice(-10);
+    const matchMobile =
+      cleanMobileDigits.length >= 10 && itemMobileDigits === cleanMobileDigits;
+    const matchEmail =
+      complaint.email.trim().toLowerCase() === mobileOrLookup.trim().toLowerCase();
+
+    if (!matchMobile && !matchEmail) {
+      return null;
+    }
+  }
+
+  return complaint;
+}
+
 export async function createComplaint(input: Omit<ComplaintRecord, "id" | "status" | "internalNotes" | "submittedAt"> & { productImageUrl?: string; invoiceUrl?: string }) {
   const records = await listComplaints(true);
   const complaint: ComplaintRecord = {

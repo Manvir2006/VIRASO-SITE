@@ -155,8 +155,8 @@ export default function ProductComplaintPage() {
             </div>
             <p className="mt-6 text-lg text-slate-600">Our support team will review your complaint.</p>
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+              <Link href={`/support/track-complaint?complaintId=${encodeURIComponent(complaintId)}`} className="inline-flex rounded-full bg-[#0d2946] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#071d31]">Track This Complaint</Link>
               <Link href="/support/product-complaint" className="inline-flex rounded-full border border-[#0d2946] bg-white px-5 py-3 text-sm font-bold text-[#0d2946]">Submit Another Complaint</Link>
-              <Link href="/support/track-order" className="inline-flex rounded-full bg-[#0d2946] px-5 py-3 text-sm font-bold text-white">Track Order</Link>
             </div>
           </div>
         )}

@@ -89,8 +89,13 @@ export async function createCashfreeOrder(input: CashfreeOrderInput): Promise<Ca
   };
 
   if (input.returnUrl) {
+    let finalReturnUrl = input.returnUrl;
+    // Cashfree production strictly requires return_url to start with https://
+    if (getCashfreeEnv() === "production" && finalReturnUrl.startsWith("http://")) {
+      finalReturnUrl = finalReturnUrl.replace(/^http:\/\//i, "https://");
+    }
     payload.order_meta = {
-      return_url: input.returnUrl,
+      return_url: finalReturnUrl,
     };
   }
 

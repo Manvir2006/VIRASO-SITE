@@ -61,8 +61,12 @@ export async function POST(request: NextRequest) {
     if (configured) {
       // Determine origin for return_url callback
       const host = request.headers.get("host") || "localhost:3000";
-      const proto = request.headers.get("x-forwarded-proto") || "http";
-      const origin = process.env.NEXT_PUBLIC_BASE_URL || `${proto}://${host}`;
+      const isProd = getCashfreeEnv() === "production";
+      const proto = isProd ? "https" : (request.headers.get("x-forwarded-proto") || "http");
+      const configuredBase = process.env.NEXT_PUBLIC_BASE_URL;
+      const origin = configuredBase && configuredBase.startsWith("https://")
+        ? configuredBase
+        : `${proto}://${host}`;
       const returnUrl = `${origin}/checkout/verify?order_id=${encodeURIComponent(cfOrderId)}`;
 
       try {
@@ -98,7 +102,7 @@ export async function POST(request: NextRequest) {
               cfError?.message ||
               "Failed to initialize Cashfree payment session. Please verify your Cashfree credentials.",
           },
-          { status: 502 }
+          { status: 400 }
         );
       }
     }

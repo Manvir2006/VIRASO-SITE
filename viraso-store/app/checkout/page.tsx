@@ -78,7 +78,12 @@ export default function CheckoutPage() {
         }),
       });
 
-      const data = await res.json();
+      let data: any = {};
+      try {
+        data = await res.json();
+      } catch {
+        throw new Error(`Server returned status ${res.status}. Please check your connection or server logs.`);
+      }
       if (!res.ok) throw new Error(data.error || "Checkout failed.");
 
       if (data.isLiveGateway && data.paymentSessionId) {

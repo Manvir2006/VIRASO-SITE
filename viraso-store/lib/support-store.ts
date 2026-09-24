@@ -356,6 +356,30 @@ export async function getOrderByNumber(orderNumber: string) {
   return orders.find((order) => order.orderNumber.toUpperCase() === orderNumber.trim().toUpperCase()) ?? null;
 }
 
+export async function getOrderByCashfreeId(cashfreeOrderId: string) {
+  const orders = await listOrders(true);
+  const clean = cashfreeOrderId.trim();
+  return orders.find((order) => order.cashfreeOrderId === clean) ?? null;
+}
+
+export async function markOrderAsPaid(
+  lookupId: string,
+  cashfreePaymentId?: string
+) {
+  const orders = await listOrders(true);
+  const clean = lookupId.trim();
+  const order = orders.find(
+    (o) => o.orderNumber.toUpperCase() === clean.toUpperCase() || o.cashfreeOrderId === clean
+  );
+  if (!order) return null;
+
+  return updateOrder(order.orderNumber, {
+    paymentStatus: "Paid",
+    status: order.status === "Pending" ? "Processing" : order.status,
+    cashfreePaymentId: cashfreePaymentId || order.cashfreePaymentId || "",
+  });
+}
+
 export async function createOrderRecord(input: {
   customerName: string;
   email: string;

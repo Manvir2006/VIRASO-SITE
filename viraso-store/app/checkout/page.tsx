@@ -20,7 +20,7 @@ export default function CheckoutPage() {
   const [address, setAddress] = useState("");
   const [city, setCity] = useState("");
   const [pincode, setPincode] = useState("");
-  const [stateName, setStateName] = useState("Punjab");
+  const [stateName, setStateName] = useState("");
   const [isProcessing, setIsProcessing] = useState(false);
   const [processingStatus, setProcessingStatus] = useState("");
   const [completedOrder, setCompletedOrder] = useState<any>(null);
@@ -262,7 +262,7 @@ export default function CheckoutPage() {
                     onChange={(e) => setCustomerName(e.target.value)}
                     required
                     className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-[#0d2946] focus:bg-white focus:outline-none"
-                    placeholder="e.g. Manvir Singh"
+                    placeholder="Enter full name"
                   />
                 </div>
 
@@ -280,7 +280,7 @@ export default function CheckoutPage() {
                         onChange={(e) => setPhone(e.target.value.replace(/\D/g, ""))}
                         required
                         className="w-full bg-transparent py-3 pr-4 text-sm focus:outline-none"
-                        placeholder="6280377678"
+                        placeholder="Enter 10-digit mobile number"
                       />
                     </div>
                   </div>
@@ -293,7 +293,7 @@ export default function CheckoutPage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-[#0d2946] focus:bg-white focus:outline-none"
-                      placeholder="viraso.india@gmail.com"
+                      placeholder="email@example.com"
                     />
                   </div>
                 </div>
@@ -308,7 +308,7 @@ export default function CheckoutPage() {
                     required
                     rows={2}
                     className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-[#0d2946] focus:bg-white focus:outline-none"
-                    placeholder="#5598, Street No. 22, Gobind Nagar, Daba Road"
+                    placeholder="House / Flat / Workshop No., Street, Area"
                   />
                 </div>
 
@@ -321,7 +321,7 @@ export default function CheckoutPage() {
                       value={city}
                       onChange={(e) => setCity(e.target.value)}
                       className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-[#0d2946] focus:bg-white focus:outline-none"
-                      placeholder="Ludhiana"
+                      placeholder="City"
                     />
                   </div>
                   <div>
@@ -332,7 +332,7 @@ export default function CheckoutPage() {
                       value={stateName}
                       onChange={(e) => setStateName(e.target.value)}
                       className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-[#0d2946] focus:bg-white focus:outline-none"
-                      placeholder="Punjab"
+                      placeholder="State"
                     />
                   </div>
                   <div>
@@ -344,7 +344,7 @@ export default function CheckoutPage() {
                       value={pincode}
                       onChange={(e) => setPincode(e.target.value.replace(/\D/g, ""))}
                       className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-[#0d2946] focus:bg-white focus:outline-none"
-                      placeholder="141003"
+                      placeholder="PIN Code"
                     />
                   </div>
                 </div>

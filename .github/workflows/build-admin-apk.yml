@@ -30,18 +30,30 @@ jobs:
         run: |
           yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
 
+      - name: Generate Release Keystore
+        run: |
+          keytool -genkeypair -v \
+            -keystore viraso-admin-android/app/release.keystore \
+            -alias viraso \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 10000 \
+            -storepass viraso2026 \
+            -keypass viraso2026 \
+            -dname "CN=Viraso Admin, OU=Viraso, O=Marjara Enterprises, L=Ludhiana, ST=Punjab, C=IN"
+
       - name: Grant Execute Permission for Gradlew
         run: chmod +x viraso-admin-android/gradlew
 
-      - name: Build Debug APK
+      - name: Build Signed Release APK
         working-directory: viraso-admin-android
-        run: ./gradlew assembleDebug --no-daemon --stacktrace
+        run: ./gradlew assembleRelease --no-daemon --stacktrace
 
       - name: Copy & Rename APK
         run: |
           mkdir -p output
-          cp viraso-admin-android/app/build/outputs/apk/debug/app-debug.apk output/VirasoAdmin.apk
-          echo "APK generated successfully at output/VirasoAdmin.apk"
+          cp viraso-admin-android/app/build/outputs/apk/release/app-release.apk output/VirasoAdmin.apk
+          echo "Release APK generated successfully at output/VirasoAdmin.apk"
           ls -lh output/VirasoAdmin.apk
 
       - name: Upload APK as Workflow Artifact
@@ -56,25 +68,24 @@ jobs:
         uses: softprops/action-gh-release@v2
         if: github.ref == 'refs/heads/main'
         with:
-          tag_name: v1.0.1
-          name: "Viraso Admin Android App v1.0.1"
+          tag_name: v1.0.2
+          name: "Viraso Admin Android App v1.0.2 (Signed Release)"
           body: |
-            ## Viraso Admin Mobile App (APK) 📱
+            ## Viraso Admin Mobile App (Signed Release APK) 📱
 
-            Direct download link for the Viraso Admin Android application.
+            Direct download link for the Viraso Admin Android application configured for **https://virasoindia.store/admin**.
 
-            ### Features:
-            - **Native Viraso UI**: Fullscreen, fast mobile operations for orders, CRM, inventory & B2B inquiries.
-            - **Pull to Refresh**: Quick refresh for live order tracking.
-            - **Camera & Photo Uploads**: Direct camera and gallery file picker for product images & shipping receipts.
-            - **Server URL Switcher**: Built-in dialog to point to your live domain (`https://viraso.in`) or any server URL.
-            - **Hardware Back Button Handling**: Smooth in-app navigation without accidental exit.
+            ### Release Notes:
+            - **Signed Production Release**: Signed with a permanent release keystore (v1 + v2 APK signature schemes) for compatibility with all Android phones (Samsung, Xiaomi, Vivo, Oppo, Realme, OnePlus, Pixel).
+            - **Min SDK 21**: Supports Android 5.0 through Android 14.
+            - **Target URL**: Baked in default to `https://virasoindia.store/admin`.
 
-            ### How to Install:
-            1. Download `VirasoAdmin.apk` to your Android phone.
-            2. Tap the downloaded file to install.
-            3. If prompted, select "Allow from this source" in your phone settings.
-            4. Open **Viraso Admin** and log in!
+            ### Installation Instructions:
+            1. If you previously tried installing an earlier test version of the app, **uninstall it first**.
+            2. Download `VirasoAdmin.apk` below.
+            3. Open your phone's **Downloads** and tap `VirasoAdmin.apk`.
+            4. If Google Play Protect displays a prompt: tap **"More details"** and tap **"Install anyway"**.
+            5. Open the app and log in to your Viraso admin portal!
           files: output/VirasoAdmin.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

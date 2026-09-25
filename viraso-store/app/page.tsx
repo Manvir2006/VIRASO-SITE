@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getPublishedProducts } from "@/lib/product-store";
-import { SupportNav } from "@/components/support-nav";
+import { SiteHeader } from "@/components/site-header";
 import { FollowUs } from "@/components/follow-us";
 import { SiteFooter } from "@/components/site-footer";
 
@@ -40,56 +40,7 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen bg-[var(--brand-bg)] text-[var(--brand-black)]">
-      <header className="sticky top-0 z-50 border-b border-[var(--brand-border)] bg-white/90 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="relative flex h-16 w-44 sm:w-48 items-center justify-center overflow-hidden rounded-xl border border-[var(--brand-border)] bg-white p-2 shadow-sm">
-              <Image
-                src="/logo/viraso-logo-cropped.png"
-                alt="Viraso logo"
-                width={220}
-                height={75}
-                className="h-full w-full object-contain"
-                priority
-              />
-            </div>
-            <div className="leading-none">
-              <p className="font-viraso text-2xl font-black lowercase tracking-tight text-[var(--brand-navy)]" style={{ fontFamily: '"Geometr415 Blk BT", "Geometr 415", Eurostile, sans-serif' }}>
-                viraso
-              </p>
-              <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.18em] text-[var(--brand-muted)]">
-                By Marjara Enterprises
-              </p>
-            </div>
-          </Link>
-
-          <nav className="hidden items-center gap-8 text-sm font-semibold text-[var(--brand-black)] md:flex">
-            <Link href="/" className="transition hover:text-[var(--brand-navy)]">Home</Link>
-            <Link href="/products" className="transition hover:text-[var(--brand-navy)]">Products</Link>
-            <Link href="/about" className="transition hover:text-[var(--brand-navy)]">About Us</Link>
-            <Link href="/warranty" className="transition hover:text-[var(--brand-navy)]">Warranty</Link>
-            <Link href="/product-registration" className="transition hover:text-[var(--brand-navy)]">Registration</Link>
-            <Link href="/support/contact" className="transition hover:text-[var(--brand-navy)]">Contact</Link>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <SupportNav />
-            <Link
-              href="/cart"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--brand-border)] bg-white text-xl text-[var(--brand-navy)] shadow-sm transition hover:border-[var(--brand-navy)]"
-              aria-label="Cart"
-            >
-              🛒
-            </Link>
-            <Link
-              href="/products"
-              className="hidden rounded-full bg-[var(--brand-navy)] px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[var(--brand-navy-dark)] sm:inline-flex"
-            >
-              Shop Products
-            </Link>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       <section className="relative overflow-hidden border-b border-[var(--brand-border)] bg-white">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-24">

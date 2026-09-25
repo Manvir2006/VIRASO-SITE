@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
@@ -94,48 +95,7 @@ const faqs = [
 export default function FAQsPage() {
   return (
     <main className="min-h-screen bg-[#f5f7fb] text-[#111111]">
-      {/* Top Header */}
-      <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="relative flex h-14 w-40 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
-              <Image
-                src="/logo/viraso-logo-cropped.png"
-                alt="Viraso logo"
-                width={200}
-                height={65}
-                className="h-full w-full object-contain"
-              />
-            </div>
-            <div className="leading-none">
-              <p
-                className="font-viraso text-2xl font-black lowercase tracking-tight text-[#0d2946]"
-                style={{ fontFamily: '"Geometr415 Blk BT", "Geometr 415", Eurostile, sans-serif' }}
-              >
-                viraso
-              </p>
-              <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.18em] text-slate-500">
-                By Marjara Enterprises
-              </p>
-            </div>
-          </Link>
-
-          <nav className="flex items-center gap-3">
-            <Link
-              href="/products"
-              className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-xs font-bold text-slate-700 hover:bg-slate-100"
-            >
-              Browse Products
-            </Link>
-            <Link
-              href="/track-order"
-              className="rounded-full bg-[#0d2946] px-4 py-2 text-xs font-bold text-white hover:bg-[#071d31]"
-            >
-              Track Order
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* Hero Section */}
       <section className="bg-[#0d2946] px-4 py-16 text-center text-white sm:px-6 lg:px-8">

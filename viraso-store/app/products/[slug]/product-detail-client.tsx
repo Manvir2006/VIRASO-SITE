@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import type { Product } from "@/lib/products";
-import { SupportNav } from "@/components/support-nav";
+import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
 export default function ProductDetailClient({ product }: { product: Product }) {
@@ -67,35 +67,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
 
   return (
     <main className="min-h-screen bg-[#f5f7fb] text-[#111111]">
-      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="relative flex h-16 w-44 sm:w-48 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
-              <Image
-                src="/logo/viraso-logo-cropped.png"
-                alt="Viraso logo"
-                width={220}
-                height={75}
-                className="h-full w-full object-contain"
-                priority
-              />
-            </div>
-            <p className="font-viraso text-2xl font-black lowercase tracking-tight text-[#0d2946]" style={{ fontFamily: '"Geometr415 Blk BT", "Geometr 415", Eurostile, sans-serif' }}>viraso</p>
-          </Link>
-
-          <nav className="hidden items-center gap-6 text-sm font-semibold md:flex">
-            <Link href="/" className="transition hover:text-[#0d2946]">Home</Link>
-            <Link href="/products" className="transition hover:text-[#0d2946]">Products</Link>
-            <Link href="/about" className="transition hover:text-[#0d2946]">About</Link>
-            <Link href="/support/contact" className="transition hover:text-[#0d2946]">Contact</Link>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <SupportNav />
-            <Link href="/products" className="inline-flex rounded-full bg-[#0d2946] px-4 py-2 text-sm font-bold text-white">Back</Link>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
         <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">

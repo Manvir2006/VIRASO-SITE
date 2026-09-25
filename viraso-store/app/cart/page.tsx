@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 
 type CartItem = {
   id: string;
@@ -38,8 +40,9 @@ export default function CartPage() {
   const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   return (
-    <main className="min-h-screen bg-[#f5f7fb] px-4 py-16 text-[#111111] sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-6xl">
+    <main className="min-h-screen bg-[#f5f7fb] text-[#111111]">
+      <SiteHeader />
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="mb-10 text-center">
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#0d2946]">Shopping Cart</p>
           <h1 className="mt-4 text-4xl font-black tracking-[-0.04em]">Your Cart</h1>
@@ -100,6 +103,7 @@ export default function CartPage() {
           </div>
         )}
       </div>
+      <SiteFooter />
     </main>
   );
 }

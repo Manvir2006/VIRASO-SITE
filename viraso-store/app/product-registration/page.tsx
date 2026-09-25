@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { SiteHeader } from "@/components/site-header";
 
 type Option = { id: string; name: string; categoryId?: string; subcategoryId?: string };
 type Registration = {
@@ -79,24 +80,7 @@ export default function ProductRegistrationPage() {
 
   return (
     <main className="min-h-screen bg-[#f5f7fb] text-[#111111]">
-      <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="relative flex h-16 w-44 sm:w-48 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
-              <Image
-                src="/logo/viraso-logo-cropped.png"
-                alt="Viraso logo"
-                width={220}
-                height={75}
-                className="h-full w-full object-contain"
-                priority
-              />
-            </div>
-            <span className="font-viraso text-2xl font-black lowercase tracking-tight text-[#0d2946]" style={{ fontFamily: '"Geometr415 Blk BT", "Geometr 415", Eurostile, sans-serif' }}>viraso</span>
-          </Link>
-          <Link href="/warranty" className="rounded-full border border-[#0d2946] px-4 py-2 text-sm font-bold text-[#0d2946]">Warranty & Support</Link>
-        </div>
-      </header>
+      <SiteHeader />
 
       <section className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="mb-8">

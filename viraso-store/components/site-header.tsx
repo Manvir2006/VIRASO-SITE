@@ -185,30 +185,16 @@ export function SiteHeader() {
               <Link
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center gap-2.5"
+                className="flex items-center"
               >
-                <div className="relative flex h-12 w-32 items-center justify-center overflow-hidden rounded-lg border border-slate-200 bg-white p-1">
+                <div className="relative flex h-12 w-36 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white p-1.5 shadow-2xs">
                   <Image
                     src="/logo/viraso-logo-cropped.png"
                     alt="Viraso logo"
-                    width={160}
-                    height={50}
+                    width={180}
+                    height={55}
                     className="h-full w-full object-contain"
                   />
-                </div>
-                <div>
-                  <span
-                    className="font-viraso text-lg font-black lowercase tracking-tight text-[#0d2946]"
-                    style={{
-                      fontFamily:
-                        '"Geometr415 Blk BT", "Geometr 415", Eurostile, sans-serif',
-                    }}
-                  >
-                    viraso
-                  </span>
-                  <p className="text-[8px] font-semibold uppercase tracking-wider text-slate-400">
-                    By Marjara Enterprises
-                  </p>
                 </div>
               </Link>
 
@@ -305,41 +291,19 @@ export function SiteHeader() {
                 </div>
               </div>
 
-              {/* Account, B2B & Admin Quick Links */}
-              <div className="border-t border-slate-100 pt-4">
-                <div className="grid grid-cols-2 gap-2">
-                  <Link
-                    href="/account"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center gap-2 rounded-xl border border-slate-200 px-3.5 py-2.5 text-xs font-bold text-slate-700 hover:bg-slate-50 active:scale-95"
-                  >
-                    <span>👤</span>
-                    <span>My Account</span>
-                  </Link>
-
-                  <Link
-                    href="/b2b"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center gap-2 rounded-xl border border-slate-200 px-3.5 py-2.5 text-xs font-bold text-slate-700 hover:bg-slate-50 active:scale-95"
-                  >
-                    <span>🏢</span>
-                    <span>B2B Wholesale</span>
-                  </Link>
-                </div>
-
-                <div className="mt-2">
-                  <Link
-                    href="/admin"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between rounded-xl bg-slate-100 px-4 py-2.5 text-xs font-bold text-[#0d2946] hover:bg-slate-200 active:scale-95"
-                  >
-                    <span className="flex items-center gap-2">
-                      <span>🔑</span>
-                      <span>Admin Management Portal</span>
-                    </span>
-                    <span>↗</span>
-                  </Link>
-                </div>
+              {/* B2B Wholesale Quick Link */}
+              <div className="border-t border-slate-100 pt-3">
+                <Link
+                  href="/b2b"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50/80 px-4 py-3 text-xs font-bold text-slate-800 hover:bg-white active:scale-95 transition"
+                >
+                  <span className="flex items-center gap-2">
+                    <span className="text-base">🏢</span>
+                    <span>B2B Wholesale Inquiries</span>
+                  </span>
+                  <span className="text-xs text-slate-400">→</span>
+                </Link>
               </div>
 
               {/* Direct Call / WhatsApp Helpline */}

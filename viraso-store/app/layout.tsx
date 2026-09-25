@@ -13,6 +13,12 @@ export const metadata: Metadata = {
     "TA1 stand",
     "Umbrella sewing machine stand",
   ],
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Viraso Admin",
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },

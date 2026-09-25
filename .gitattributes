@@ -1,0 +1,3 @@
+# Ensure gradlew always keeps LF line endings on Unix/Linux runners
+viraso-admin-android/gradlew text eol=lf
+*.sh text eol=lf

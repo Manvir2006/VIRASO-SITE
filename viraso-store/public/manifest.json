@@ -1,0 +1,25 @@
+{
+  "name": "Viraso Admin & Store",
+  "short_name": "Viraso Admin",
+  "description": "Viraso Operations, E-Commerce, and Administration Platform",
+  "start_url": "/admin/dashboard",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0d2946",
+  "theme_color": "#0d2946",
+  "icons": [
+    {
+      "src": "/logo/viraso-v-mark.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo/viraso-v-mark.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

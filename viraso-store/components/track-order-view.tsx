@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { SiteHeader } from "@/components/site-header";
 
 type TrackedOrder = {
   id: string;
@@ -72,43 +72,31 @@ export function TrackOrderView() {
   };
 
   return (
-    <main className="min-h-screen bg-[#f5f7fb] px-4 py-12 text-[#111111] sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-4xl">
-        {/* Top Branding Navigation */}
-        <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="relative flex h-14 w-40 sm:w-44 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
-              <Image
-                src="/logo/viraso-logo-cropped.png"
-                alt="Viraso logo"
-                width={200}
-                height={68}
-                className="h-full w-full object-contain"
-                priority
-              />
+    <div className="min-h-screen bg-[#f5f7fb] text-[#111111]">
+      <SiteHeader />
+      <main className="px-4 py-10 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          {/* Subheader Quick Links */}
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#0d2946]">Order Status</p>
+              <h1 className="text-2xl font-black text-slate-900">Track Your Order</h1>
             </div>
-            <span
-              className="font-viraso text-2xl font-black lowercase tracking-tight text-[#0d2946]"
-              style={{ fontFamily: '"Geometr415 Blk BT", "Geometr 415", Eurostile, sans-serif' }}
-            >
-              viraso
-            </span>
-          </Link>
-          <div className="flex items-center gap-3">
-            <Link
-              href="/products"
-              className="inline-flex rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-bold text-slate-700 shadow-sm transition hover:bg-slate-50"
-            >
-              Browse Products
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex rounded-full bg-[#0d2946] px-4 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-[#071d31]"
-            >
-              Contact Support
-            </Link>
+            <div className="flex items-center gap-2">
+              <Link
+                href="/products"
+                className="inline-flex rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-xs font-bold text-slate-700 shadow-xs transition hover:bg-slate-50"
+              >
+                Browse Products
+              </Link>
+              <Link
+                href="/support/contact"
+                className="inline-flex rounded-full bg-[#0d2946] px-3.5 py-1.5 text-xs font-bold text-white shadow-xs transition hover:bg-[#071d31]"
+              >
+                Contact Support
+              </Link>
+            </div>
           </div>
-        </div>
 
         {/* Main Content Card */}
         <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
@@ -370,5 +358,6 @@ export function TrackOrderView() {
         </div>
       </div>
     </main>
+  </div>
   );
 }

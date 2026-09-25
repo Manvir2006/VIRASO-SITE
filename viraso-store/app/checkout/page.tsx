@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { SiteHeader } from "@/components/site-header";
 
 type CheckoutItem = {
   id: string;
@@ -155,8 +156,10 @@ export default function CheckoutPage() {
 
   if (completedOrder) {
     return (
-      <main className="min-h-screen bg-[#f5f7fb] px-4 py-16 text-[#111111] sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm sm:p-12">
+      <div className="min-h-screen bg-[#f5f7fb] text-[#111111]">
+        <SiteHeader />
+        <main className="px-4 py-12 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm sm:p-12">
           {demoBanner && (
             <div className="mb-6 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-left text-xs text-amber-900">
               <p className="font-bold flex items-center gap-1.5 text-amber-800">
@@ -230,13 +233,16 @@ export default function CheckoutPage() {
           </div>
         </div>
       </main>
+    </div>
     );
   }
 
   return (
-    <main className="min-h-screen bg-[#f5f7fb] px-4 py-16 text-[#111111] sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-6xl">
-        <div className="mb-10 text-center">
+    <div className="min-h-screen bg-[#f5f7fb] text-[#111111]">
+      <SiteHeader />
+      <main className="px-4 py-12 text-[#111111] sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-10 text-center">
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#0d2946]">Viraso Store</p>
           <h1 className="mt-3 text-4xl font-black tracking-tight text-slate-900">Secure Checkout</h1>
           <p className="mt-2 text-sm text-slate-500">
@@ -471,5 +477,6 @@ export default function CheckoutPage() {
         </div>
       </div>
     </main>
+  </div>
   );
 }

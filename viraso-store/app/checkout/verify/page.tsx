@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
+import { SiteHeader } from "@/components/site-header";
 
 function VerifyContent() {
   const searchParams = useSearchParams();
@@ -160,17 +161,20 @@ function VerifyContent() {
 
 export default function CheckoutVerifyPage() {
   return (
-    <main className="min-h-screen bg-[#f5f7fb] px-4 py-16 text-[#111111] sm:px-6 lg:px-8">
-      <Suspense
-        fallback={
-          <div className="mx-auto max-w-lg text-center p-10">
-            <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-slate-200 border-t-[#0d2946]" />
-            <p className="mt-4 text-sm text-slate-600">Loading payment status...</p>
-          </div>
-        }
-      >
-        <VerifyContent />
-      </Suspense>
-    </main>
+    <div className="min-h-screen bg-[#f5f7fb] text-[#111111]">
+      <SiteHeader />
+      <main className="px-4 py-16 text-[#111111] sm:px-6 lg:px-8">
+        <Suspense
+          fallback={
+            <div className="mx-auto max-w-lg text-center p-10">
+              <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-slate-200 border-t-[#0d2946]" />
+              <p className="mt-4 text-sm text-slate-600">Loading payment status...</p>
+            </div>
+          }
+        >
+          <VerifyContent />
+        </Suspense>
+      </main>
+    </div>
   );
 }

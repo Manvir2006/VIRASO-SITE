@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { SiteHeader } from "@/components/site-header";
 
 export default function ContactSupportPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -43,24 +43,10 @@ export default function ContactSupportPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#f5f7fb] px-4 py-16 text-[#111111] sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-6xl">
-        <div className="mb-8 flex items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="relative flex h-16 w-44 sm:w-48 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
-              <Image
-                src="/logo/viraso-logo-cropped.png"
-                alt="Viraso logo"
-                width={220}
-                height={75}
-                className="h-full w-full object-contain"
-                priority
-              />
-            </div>
-            <span className="font-viraso text-2xl font-black lowercase tracking-tight text-[#0d2946]" style={{ fontFamily: '"Geometr415 Blk BT", "Geometr 415", Eurostile, sans-serif' }}>viraso</span>
-          </Link>
-          <Link href="/products" className="inline-flex rounded-full bg-[#0d2946] px-4 py-2 text-sm font-bold text-white">Back to Products</Link>
-        </div>
+    <div className="min-h-screen bg-[#f5f7fb] text-[#111111]">
+      <SiteHeader />
+      <main className="px-4 py-10 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
 
         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm lg:p-10">
@@ -126,5 +112,6 @@ export default function ContactSupportPage() {
         </div>
       </div>
     </main>
+  </div>
   );
 }

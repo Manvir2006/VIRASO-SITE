@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String PREFS_NAME = "VirasoAdminPrefs";
     private static final String KEY_ADMIN_URL = "admin_server_url";
-    private static final String DEFAULT_URL = "https://viraso.in/admin";
+    private static final String DEFAULT_URL = "https://virasoindia.store/admin";
 
     private WebView webView;
     private SwipeRefreshLayout swipeRefresh;

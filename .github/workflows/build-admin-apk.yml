@@ -68,17 +68,20 @@ jobs:
         uses: softprops/action-gh-release@v2
         if: github.ref == 'refs/heads/main'
         with:
-          tag_name: v1.0.2
-          name: "Viraso Admin Android App v1.0.2 (Signed Release)"
+          tag_name: v1.0.3
+          name: "Viraso Admin Android App v1.0.3 (Professional & Live Notifications)"
           body: |
-            ## Viraso Admin Mobile App (Signed Release APK) 📱
+            ## Viraso Admin Mobile App v1.0.3 📱
 
-            Direct download link for the Viraso Admin Android application configured for **https://virasoindia.store/admin**.
+            Professional Admin App with **real-time audio chime alerts and push notifications** for orders, customer complaints, and B2B wholesale inquiries.
 
-            ### Release Notes:
-            - **Signed Production Release**: Signed with a permanent release keystore (v1 + v2 APK signature schemes) for compatibility with all Android phones (Samsung, Xiaomi, Vivo, Oppo, Realme, OnePlus, Pixel).
-            - **Min SDK 21**: Supports Android 5.0 through Android 14.
-            - **Target URL**: Baked in default to `https://virasoindia.store/admin`.
+            ### What's New in v1.0.3:
+            - **Guaranteed CSS Rendering**: Fixed mobile styling issues with embedded styles and modern Chrome user-agent.
+            - **Live Sound Alerts**: Audible chime whenever an order, complaint, or B2B lead comes in.
+            - **Mobile Bottom Navigation Bar**: Quick 1-tap switching between Dashboard, Orders, Complaints, and B2B Leads.
+            - **Notification Center Drawer**: Bell badge with live count of pending orders and complaints.
+            - **Phone Push Notifications**: Android system push notifications for new incoming orders and complaints.
+            - **Signed Production Release**: Full installation compatibility across all Android devices.
 
             ### Installation Instructions:
             1. If you previously tried installing an earlier test version of the app, **uninstall it first**.

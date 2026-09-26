@@ -9,7 +9,10 @@ const quickLinks = [
   { href: "/track-order", label: "Track Order" },
   { href: "/product-registration", label: "Product Registration" },
   { href: "/warranty", label: "Warranty" },
-  { href: "/return-cancellation", label: "Return & Cancellation" },
+  { href: "/return-cancellation", label: "Refunds & Cancellations" },
+  { href: "/shipping-policy", label: "Shipping Policy" },
+  { href: "/terms-and-conditions", label: "Terms & Conditions" },
+  { href: "/privacy-policy", label: "Privacy Policy" },
   { href: "/support/product-complaint", label: "Product Complaint" },
   { href: "/support/track-complaint", label: "Track Complaint" },
   { href: "/contact", label: "Contact Us" },
@@ -53,12 +56,16 @@ export function SiteFooter() {
           <p className="max-w-sm text-sm leading-6 text-white/70">
             A product of Marjara Enterprises. Built for reliable sewing performance, durable quality, and practical everyday value across India.
           </p>
+          <div className="text-xs text-white/50 space-y-1">
+            <p><strong>UDYAM:</strong> UDYAM-PB-12-0283538</p>
+            <p><strong>GSTIN:</strong> 03TIMPS1405N1ZL</p>
+          </div>
         </div>
 
         {/* Quick Links (Clean 2-column grid on mobile & desktop) */}
         <div className="lg:col-span-1">
           <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-white">
-            Quick links
+            Quick links & Policies
           </h3>
           <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2.5 sm:gap-x-6 sm:gap-y-3 text-sm text-white/75">
             {quickLinks.map((link) => (
@@ -74,24 +81,37 @@ export function SiteFooter() {
           </ul>
         </div>
 
-        {/* Business Column */}
+        {/* Business & Support Column */}
         <div>
           <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-white">
-            Business
+            Support & Business
           </h3>
           <ul className="mt-4 space-y-2.5 text-sm text-white/70">
-            <li>Manufacturer & seller</li>
-            <li>Home & professional users</li>
             <li>
+              <span className="text-xs text-white/50 block">Helpline:</span>
+              <a href="tel:6280377678" className="font-semibold text-white hover:underline">
+                📞 6280377678
+              </a>
+            </li>
+            <li>
+              <span className="text-xs text-white/50 block">WhatsApp:</span>
+              <a href="https://wa.me/916280377678" target="_blank" rel="noreferrer" className="font-semibold text-emerald-400 hover:underline">
+                💬 6280377678
+              </a>
+            </li>
+            <li>
+              <span className="text-xs text-white/50 block">Email:</span>
+              <a href="mailto:viraso.india@gmail.com" className="font-semibold text-white hover:underline">
+                viraso.india@gmail.com
+              </a>
+            </li>
+            <li className="pt-2">
               <Link
                 href="/b2b-inquiry"
-                className="transition-colors hover:text-white hover:underline"
+                className="inline-block rounded-lg bg-white/10 px-3 py-1.5 text-xs font-bold text-white transition hover:bg-white/20"
               >
-                Bulk & Wholesale Inquiries
+                Bulk & Wholesale Inquiries →
               </Link>
-            </li>
-            <li className="pt-2 text-xs text-white/50">
-              UDYAM No.: UDYAM-PB-12-0283538
             </li>
           </ul>
         </div>
@@ -102,25 +122,46 @@ export function SiteFooter() {
         </div>
       </div>
 
-      {/* Bottom Copyright Bar with Dynamic Year */}
+      {/* Bottom Copyright & Policy Bar (Explicitly displays all Whitelisting required policies) */}
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-center text-sm text-white/60 sm:flex-row sm:text-left sm:px-6 lg:px-8">
           <p>
-            © {currentYear} Viraso (Marjara Enterprises). All rights reserved. • UDYAM No. UDYAM-PB-12-0283538
+            © {currentYear} Viraso (Marjara Enterprises). All rights reserved.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-white/60">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 text-xs text-white/65">
+            <Link
+              href="/contact"
+              className="transition-colors hover:text-white hover:underline"
+            >
+              Contact Us
+            </Link>
+            <span>•</span>
+            <Link
+              href="/terms-and-conditions"
+              className="transition-colors hover:text-white hover:underline"
+            >
+              Terms & Conditions
+            </Link>
+            <span>•</span>
             <Link
               href="/return-cancellation"
               className="transition-colors hover:text-white hover:underline"
             >
-              Return, Cancellation & Damage Policy
+              Refunds & Cancellations
             </Link>
             <span>•</span>
             <Link
-              href="/warranty"
+              href="/privacy-policy"
               className="transition-colors hover:text-white hover:underline"
             >
-              Warranty Terms
+              Privacy Policy
+            </Link>
+            <span>•</span>
+            <Link
+              href="/shipping-policy"
+              className="transition-colors hover:text-white hover:underline"
+            >
+              Shipping Policy
             </Link>
           </div>
         </div>

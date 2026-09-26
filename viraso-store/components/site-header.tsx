@@ -307,6 +307,33 @@ export function SiteHeader() {
                 </Link>
               </div>
 
+              {/* Legal & Policies Quick Links */}
+              <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] text-slate-500 pt-1">
+                <Link
+                  href="/terms-and-conditions"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="hover:text-[#0d2946] hover:underline"
+                >
+                  Terms & Conditions
+                </Link>
+                <span>•</span>
+                <Link
+                  href="/privacy-policy"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="hover:text-[#0d2946] hover:underline"
+                >
+                  Privacy Policy
+                </Link>
+                <span>•</span>
+                <Link
+                  href="/shipping-policy"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="hover:text-[#0d2946] hover:underline"
+                >
+                  Shipping Policy
+                </Link>
+              </div>
+
               {/* Direct Call / WhatsApp Helpline */}
               <div className="rounded-2xl border border-slate-200 bg-[#f5f7fb] p-4 text-center">
                 <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">

@@ -9,6 +9,7 @@ const quickLinks = [
   { href: "/track-order", label: "Track Order" },
   { href: "/product-registration", label: "Product Registration" },
   { href: "/warranty", label: "Warranty" },
+  { href: "/return-cancellation", label: "Return & Cancellation" },
   { href: "/support/product-complaint", label: "Product Complaint" },
   { href: "/support/track-complaint", label: "Track Complaint" },
   { href: "/contact", label: "Contact Us" },
@@ -107,9 +108,21 @@ export function SiteFooter() {
           <p>
             © {currentYear} Viraso (Marjara Enterprises). All rights reserved. • UDYAM No. UDYAM-PB-12-0283538
           </p>
-          <p className="text-xs sm:text-sm text-white/50">
-            Built with precision, made for perfection.
-          </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-white/60">
+            <Link
+              href="/return-cancellation"
+              className="transition-colors hover:text-white hover:underline"
+            >
+              Return, Cancellation & Damage Policy
+            </Link>
+            <span>•</span>
+            <Link
+              href="/warranty"
+              className="transition-colors hover:text-white hover:underline"
+            >
+              Warranty Terms
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

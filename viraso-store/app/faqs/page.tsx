@@ -60,9 +60,9 @@ const faqs = [
         link: { href: "/warranty", text: "Read Warranty Terms →" },
       },
       {
-        q: "How do I raise a complaint or claim for a damaged or missing part?",
-        a: "If your product arrives damaged or has a missing component, please submit a claim on our Product Complaint page with your details and photos. Our support team resolves issues promptly.",
-        link: { href: "/support/product-complaint", text: "Submit Product Complaint →" },
+        q: "What is Viraso's policy on damaged products, missing parts, or order cancellations?",
+        a: "Viraso does not offer a general refund facility. Orders can only be cancelled before dispatch. For transit damage, breakage, missing parts, or wrong product claims, a single, continuous, and uncut unboxing video starting before opening the package is mandatory. All claims are subject to verification.",
+        link: { href: "/return-cancellation", text: "Read Return, Cancellation & Damage Policy →" },
       },
     ],
   },

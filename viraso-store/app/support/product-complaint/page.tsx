@@ -56,6 +56,19 @@ export default function ProductComplaintPage() {
             <h1 className="mt-4 text-4xl font-black tracking-[-0.04em]">Product Complaint</h1>
             <p className="mt-3 text-base text-slate-600">Share your complaint details so our team can review your purchase and resolve the issue.</p>
 
+            <div className="mt-6 rounded-xl border border-amber-300 bg-amber-50 p-4 text-xs sm:text-sm text-amber-900">
+              <p className="font-bold flex items-center gap-1.5 text-amber-950">
+                <span>⚠️</span>
+                <span>Mandatory Requirement for Damage / Missing Parts Claims:</span>
+              </p>
+              <p className="mt-1">
+                Per Viraso policy, a single continuous and uncut unboxing video starting before opening the outer packaging is mandatory for damage, breakage, missing parts, or incorrect product claims. Claims are subject to verification.{" "}
+                <Link href="/return-cancellation" className="font-bold underline text-[#0d2946]">
+                  Read full Return, Cancellation & Damage Policy →
+                </Link>
+              </p>
+            </div>
+
             <form onSubmit={handleSubmit} className="mt-8 grid gap-5 md:grid-cols-2" encType="multipart/form-data">
               <label className="space-y-2">
                 <span className="text-sm font-bold uppercase tracking-[0.14em] text-slate-600">Customer Name</span>

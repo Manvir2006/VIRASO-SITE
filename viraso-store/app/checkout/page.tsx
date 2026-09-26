@@ -467,6 +467,13 @@ export default function CheckoutPage() {
               )}
             </button>
 
+            <p className="mt-3 text-center text-[11px] text-slate-500">
+              By completing your order, you agree to Viraso's{" "}
+              <Link href="/return-cancellation" target="_blank" className="font-semibold text-[#0d2946] underline">
+                Return, Cancellation & Damage Policy
+              </Link>.
+            </p>
+
             <div className="mt-4 flex items-center justify-center gap-1.5 text-[11px] text-slate-400">
               <svg className="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 1a9 9 0 100 18A9 9 0 0010 1zm3.707 7.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
